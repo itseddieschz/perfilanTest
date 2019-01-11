@@ -12,8 +12,12 @@ function maxChar(str) {
     var caracter;
 
     for (i = 0; i < array.length; i++) {
+
+        console.log(array[i]);
+        console.log(str.split(array[i]).length - 1);
         if (str.split(array[i]).length - 1 >= repeticion) {
-            caracter = array[i - 1];
+            repeticion = str.split(array[i]).length - 1;
+            caracter = array[i];
         }
     }
     return caracter;
